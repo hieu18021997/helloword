@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/hieu18021997/helloword/issues"
   },
-  "homepage": "https://github.com/hieu18021997/helloword#readme"
+  "homepage": "https://github.com/hieu18021997/helloword#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "express-winston": "^4.2.0",
+    "moment": "^2.29.3",
+    "winston": "^3.7.2",
+    "winston-daily-rotate-file": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
