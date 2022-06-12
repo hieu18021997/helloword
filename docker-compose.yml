@@ -1,7 +1,7 @@
 version: '2.4'
 services:
   app0:
-    image: hellword_01
+    image: helloword_01
     container_name: container_01
     build: .
     ports:
