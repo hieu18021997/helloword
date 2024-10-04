@@ -1,0 +1,89 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+
+title: Auction Data Model Metrics
+model: auction_data_model
+timeseries: __time
+
+dimensions:
+  - label: App Site Name
+    column: app_site_name
+  - label: App Site Domain
+    column: app_site_domain
+  - label: Pub Name
+    column: pub_name
+  - label: App Site Cat
+    column: app_site_cat
+  - label: Ad Size
+    column: ad_size
+  - label: Device Osv
+    column: device_osv
+  - label: Bid Floor Bucket
+    column: bid_floor_bucket
+  - label: Platform Browser
+    column: platform_browser
+  - label: Device Os
+    column: device_os
+  - label: Device Type
+    column: device_type
+  - label: Ad Position
+    column: ad_position
+  - label: Video Max Duration Bucket
+    column: video_max_duration_bucket
+  - label: Video Min Duration Bucket
+    column: video_min_duration_bucket
+  - label: Placement Type
+    column: placement_type
+  - label: Auction Type
+    column: auction_type
+  - label: App Or Site
+    column: app_or_site
+  - label: Device State
+    column: device_state
+  - label: Device Country
+    column: device_country
+
+measures:
+  - name: total_bid_requests
+    label: Total Bid Requests
+    expression: COUNT(bid_request_cnt)
+    description: The total number of bid requests recorded in the auction data.
+  - name: total_bid_floor
+    label: Total Bid Floor
+    expression: SUM(bid_floor)
+    description: The sum of all bid floor values in the auction data.
+  - name: average_bid_floor
+    label: Average Bid Floor
+    expression: AVG(bid_floor)
+    description: The average bid floor value across all auction entries.
+  - name: max_bid_floor
+    label: Maximum Bid Floor
+    expression: MAX(bid_floor)
+    description: The highest bid floor value recorded in the auction data.
+  - name: min_bid_floor
+    label: Minimum Bid Floor
+    expression: MIN(bid_floor)
+    description: The lowest bid floor value recorded in the auction data.
+  - name: total_has_bid_floor
+    label: Total Has Bid Floor Count
+    expression: SUM(has_bid_floor_cnt)
+    description: The total count of entries where a bid floor was set.
+  - name: average_has_bid_floor
+    label: Average Has Bid Floor Count
+    expression: AVG(has_bid_floor_cnt)
+    description: The average count of entries with a bid floor across all records.
+  - name: max_has_bid_floor
+    label: Maximum Has Bid Floor Count
+    expression: MAX(has_bid_floor_cnt)
+    description: The maximum count of entries with a bid floor in the dataset.
+  - name: min_has_bid_floor
+    label: Minimum Has Bid Floor Count
+    expression: MIN(has_bid_floor_cnt)
+    description: The minimum count of entries with a bid floor in the dataset.
+  - name: distinct_app_site_names
+    label: Distinct App/Site Names
+    expression: COUNT(DISTINCT app_site_name)
+    description: The number of distinct app or site names present in the auction data.
